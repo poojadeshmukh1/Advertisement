@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="has-bg-img bg-purple bg-blend-multiply"> 
+<div class="container">
+<div class="col-md-4 col-md-offset-4">
+  <h2>Add Your Advertisement</h2>
+  <form class="ad" #adForm='ngForm' (submit)='createAd(adForm.value)'>
+ <div class="has-bg-img bg-purple bg-blend-multiply"> 
+ 
+    <div class="form-group">
+      <label for="ad.newsPaperName">Enter News Paper Name</label>
+      <input type="string" class="form-control" id="newsPaperName" ngModel name='newsPaperName'placeholder="Enter title" name="advertisetitle">
+    </div>
+
+    <div class="form-group">
+      <label for="ad.advertisetitle">Enter Advertise Title</label>
+      <input type="string" class="form-control" id="advertisetitle" ngModel name='advertisetitle' placeholder="Enter title" name="advertisetitle">
+    </div>
+
+    <div class="form-group">
+      <label for="ad.advownername">Enter Your Name</label>
+      <input type="string" class="form-control" id="advownername" ngModel name='advownername' placeholder="Enter Name" name="advownername">
+    </div>
+
+    <div class="form-group">
+      <label for="ad.description">Enter Description</label>
+      <input type="string" class="form-control" id="description" ngModel name='description' placeholder="Enter description" name="description">
+    </div>
+
+    <div class="form-group">
+      <label for="ad.imageUrl">Enter Image URL</label>
+      <input type="string" class="form-control" id="imageUrl" ngModel name='imageUrl' placeholder="Enter URL" name="imageurl">
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+  </div>
+  </form>
+
+  <div *ngIf='message != null' [ngClass]='msgClass' >
+    <a [routerLink] = ''> {{message}}</a>
+
+    </div>
+</div>
+

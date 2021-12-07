@@ -1,0 +1,40 @@
+
+<mat-toolbar color="primary" style="background-color:rgb(20, 136, 230);" >
+  <a
+  routerLink="/"
+  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <img routerLink="/"
+
+    width="40"
+
+    height="50"
+
+    alt="Angular Logo"
+
+    src="../../../assets/newspaper_logo.png"
+
+  >
+
+  </a>
+
+  <span>  Newspaper Advertisement System</span>
+  <span class="example-spacer"></span>
+  <a 
+  [routerLink]="'/signup'"
+  mat-icon-button 
+  class="example-icon favorite-icon" 
+  aria-label="Example icon-button with heart icon">
+  
+    Sign Up
+</a>
+
+  <a 
+  [routerLink]="'/login'"
+  mat-icon-button 
+  class="example-icon favorite-icon ml20 mr20" 
+  aria-label="Example icon-button with heart icon">
+    Login
+</a>
+  
+  
+</mat-toolbar>
