@@ -7,7 +7,7 @@ import { AppUser } from 'src/models/AppUser';
   providedIn: 'root'
 })
 export class AppuserService {
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'http://localhost:8088';
 
   constructor(private http: HttpClient) { }
 
