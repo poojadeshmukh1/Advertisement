@@ -10,7 +10,7 @@ export class AuthenticationService {
   constructor(private http:HttpClient) { }
   login(credentials) {
 
-    return this.http.post<any>('http://localhost:8080/authorization/login/user',credentials).pipe(
+    return this.http.post<any>('http://localhost:8088/authorization/login/user',credentials).pipe(
       map(
         response => {
           if (response && response.token) {
